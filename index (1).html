@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prisma Studio — Sites para comércios locais</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fb;--card:#fff;--ink:#0f1633;--mute:#5b6280;--line:#e1e4ee;--acc:#6c3df4;--acc2:#00c2a8;--hero:#0f1633;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1024;--card:#151b3a;--ink:#f1f3ff;--mute:#a4abcc;--line:#262d55;--hero:#070b1c}}
+:root[data-theme="dark"]{--bg:#0b1024;--card:#151b3a;--ink:#f1f3ff;--mute:#a4abcc;--line:#262d55;--hero:#070b1c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--hero);color:#fff}
+header .w{display:flex;justify-content:space-between;align-items:center;height:62px}
+.lg{font:800 20px Sora}.lg i{color:var(--acc2);font-style:normal}
+nav{display:flex;gap:22px;font-size:15px;font-weight:500;align-items:center}
+.btn{display:inline-block;background:var(--acc);color:#fff;font:700 15px Sora;padding:12px 24px;border-radius:12px}
+.btn.o{background:transparent;border:2px solid currentColor}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
+.hero{background:var(--hero);color:#fff;padding:72px 0 80px}
+.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.tag{display:inline-block;font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--acc2);margin-bottom:14px}
+.hero h1{font-size:clamp(36px,6vw,60px);letter-spacing:-1px}
+.hero h1 span{color:var(--acc2)}
+.hero p{color:#b9c0e6;max-width:480px;margin:18px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .o{color:#fff}
+.box{background:linear-gradient(145deg,#1a2250,#241a5e);border:1px solid #2c3470;border-radius:24px;padding:26px;display:grid;gap:14px}
+.box div{display:flex;justify-content:space-between;font:700 15px Sora;border-bottom:1px solid #2c3470;padding-bottom:12px}
+.box div:last-child{border:0;padding:0}.box span{color:var(--acc2)}
+section{padding:64px 0}
+.h{margin-bottom:28px}.h small{font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
+.h h2{font-size:clamp(28px,4.5vw,40px);margin-top:6px}
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.pj{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.pv{background:#3b1650;padding:22px 22px 0;height:210px;overflow:hidden}
+.br{background:#fff;border-radius:12px 12px 0 0;height:100%;overflow:hidden}
+.br .bar{height:18px;background:#ece7f2;display:flex;gap:4px;align-items:center;padding:0 8px}
+.br .bar i{width:6px;height:6px;border-radius:50%;background:#bbb}
+.br .nv{background:#4a1a5e;color:#ffc928;font:800 12px Sora;padding:6px 10px}
+.br .ht{background:#4a1a5e;color:#ffe9a8;text-align:center;padding:14px 8px 18px;font:800 15px Sora;text-shadow:0 0 8px #ffc928}
+.br .ht b{display:block;font-size:22px;color:#fff;text-shadow:0 0 8px #19b8ff}
+.br .rw{display:flex;gap:6px;padding:8px}.br .rw i{flex:1;height:44px;border-radius:8px}
+.pb{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pb h3{font-size:22px}.pb p{margin:0;color:var(--mute);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips i{font:600 12px Inter;font-style:normal;background:var(--bg);border:1px solid var(--line);padding:3px 10px;border-radius:99px}
+.pb .btn{margin-top:auto;align-self:flex-start}
+.soon{border:2px dashed var(--line);border-radius:22px;display:grid;place-items:center;text-align:center;padding:30px;color:var(--mute);min-height:200px}
+.soon b{display:block;font:700 20px Sora;color:var(--ink)}
+.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.pc h3{font-size:20px}.pc .pr{font:800 34px Sora;color:var(--acc);margin:8px 0 4px}.pc .pr small{font-size:14px;color:var(--mute);font-weight:600}
+.pc p{margin:0;font-size:14px;color:var(--mute)}
+.pc.hot{border:2px solid var(--acc)}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.s{padding:20px;border-left:3px solid var(--acc2);background:var(--card);border-radius:0 16px 16px 0}
+.s b{font:800 14px Sora;color:var(--acc2)}.s h3{font-size:19px;margin:4px 0}.s p{margin:0;font-size:14px;color:var(--mute)}
+footer{background:var(--hero);color:#fff;padding:56px 0 32px;text-align:center}
+footer h2{font-size:clamp(28px,5vw,42px)}footer p{color:#b9c0e6;margin:12px auto 24px;max-width:480px}
+footer .ct{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer small{display:block;margin-top:34px;color:#7f87b0;font-size:13px}
+@media(max-width:760px){nav a:not(.btn){display:none}.hero .w{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="lg" href="#inicio">Prisma Studio<i>.</i></a>
+<nav><a href="#trabalhos">Trabalhos</a><a href="#precos">Preços</a><a href="#processo">Como funciona</a><a class="btn" href="https://wa.me/5524998813075">Falar comigo</a></nav></div></header>
+
+<div class="hero" id="inicio"><div class="w">
+<div><span class="tag">Sites para comércios locais</span>
+<h1>Seu negócio <span>aparece</span> e vende mais na internet</h1>
+<p>Crio sites simples, bonitos e rápidos para açaiterias, lanchonetes, lojas e prestadores de serviço, com cardápio, WhatsApp e mapa em um só lugar.</p>
+<div class="cta"><a class="btn" href="#trabalhos">Ver meus trabalhos</a><a class="btn o" href="https://wa.me/5524998813075">Pedir orçamento</a></div></div>
+<div class="box" aria-hidden="true"><div>Site pronto para celular <span>✓</span></div><div>Botão de WhatsApp e iFood <span>✓</span></div><div>Cardápio com fotos e preços <span>✓</span></div><div>Mapa e horário de funcionamento <span>✓</span></div></div>
+</div></div>
+
+<section id="trabalhos"><div class="w">
+<div class="h"><small>Portfólio</small><h2>Sites que já criei</h2></div>
+<div class="work">
+<article class="pj"><div class="pv"><div class="br"><div class="bar"><i></i><i></i><i></i></div><div class="nv">confetti</div><div class="ht">Meu momento<b>confetti</b></div><div class="rw"><i style="background:#f3e0fb"></i><i style="background:#ffe3ef"></i><i style="background:#ffeccc"></i></div></div></div>
+<div class="pb"><h3>Confetti Açaiteria</h3><p>Site de cardápio para açaiteria e sorveteria, com fotos reais dos produtos, filtro por categoria, avaliações do Google e pedido pelo iFood e WhatsApp.</p>
+<div class="chips"><i>Cardápio</i><i>Mobile</i><i>iFood</i><i>Avaliações</i></div>
+<a class="btn" href="https://claude.ai/artifact/XcPdqm61qRiEqcwLPR1e6j">Ver site</a></div></article>
+<div class="soon"><div><b>Seu site pode ser o próximo</b>Estou abrindo vagas com preço de lançamento.</div></div>
+</div></div></section>
+
+<section id="precos" style="background:var(--card)"><div class="w">
+<div class="h"><small>Investimento</small><h2>Preços de lançamento</h2></div>
+<div class="pk">
+<div class="pc"><h3>Cartão Digital</h3><div class="pr">R$ 100</div><p>Página única com WhatsApp, endereço e Instagram. Manutenção R$ 20/mês.</p></div>
+<div class="pc"><h3>Básico</h3><div class="pr">R$ 250</div><p>Cardápio, fotos, WhatsApp e mapa. Manutenção R$ 20/mês.</p></div>
+<div class="pc hot"><h3>Completo</h3><div class="pr">R$ 400</div><p>Básico + promoções e botão de pedido pronto. Manutenção R$ 50/mês.</p></div>
+<div class="pc"><h3>Premium</h3><div class="pr">R$ 500</div><p>Completo + domínio configurado e 3 atualizações no 1º mês. Manutenção R$ 50/mês.</p></div>
+</div>
+<p style="font-size:14px;color:var(--mute);margin-top:18px">Domínio e hospedagem à parte. Entrada de 50% e o restante na entrega.</p>
+</div></section>
+
+<section id="processo"><div class="w">
+<div class="h"><small>Simples assim</small><h2>Como funciona</h2></div>
+<div class="st">
+<div class="s"><b>01</b><h3>Conversa</h3><p>Você me conta sobre o negócio e manda logo, fotos e cardápio.</p></div>
+<div class="s"><b>02</b><h3>Modelo</h3><p>Monto o site e você vê tudo no celular antes de aprovar.</p></div>
+<div class="s"><b>03</b><h3>Ajustes</h3><p>Corrijo o que precisar até ficar do seu jeito.</p></div>
+<div class="s"><b>04</b><h3>No ar</h3><p>Publico o site e cuido das atualizações quando você pedir.</p></div>
+</div></div></section>
+
+<footer id="contato"><div class="w">
+<h2>Vamos colocar seu negócio no ar?</h2>
+<p>Me chame para um orçamento sem compromisso.</p>
+<div class="ct"><a class="btn" href="https://wa.me/5524998813075">WhatsApp: (24) 99881-3075</a><a class="btn o" href="https://www.instagram.com/01_souzamidia" style="color:#fff">Instagram: @01_souzamidia</a></div>
+<small>© 2026 Prisma Studio. Todos os direitos reservados.</small>
+</div></footer>
+</body>
+</html>
